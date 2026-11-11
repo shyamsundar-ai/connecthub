@@ -1,0 +1,45 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ConnectHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ConnectHub</h1>
+        <p>Connect • Share • Follow</p>
+    </header>
+
+    <main>
+        <section id="login" class="card">
+            <h2>Welcome to ConnectHub</h2>
+            <input id="username" placeholder="Enter username">
+            <input id="password" type="password" placeholder="Enter password">
+            <button onclick="register()">Register</button>
+            <button onclick="login()">Login</button>
+        </section>
+
+        <section id="app" class="hidden">
+            <h2 id="welcome"></h2>
+            <button onclick="logout()">Logout</button>
+
+            <div class="card">
+                <h3>Create Post</h3>
+                <textarea id="postText" placeholder="What's on your mind?"></textarea>
+                <button onclick="createPost()">Publish</button>
+            </div>
+
+            <h2>News Feed</h2>
+            <div id="feed"></div>
+
+            <h2>Users</h2>
+            <div id="users"></div>
+        </section>
+    </main>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
